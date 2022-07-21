@@ -195,7 +195,7 @@ class IdleConf:
 
         Creates it if required.
         """
-        cfgDir = '.idlerc'
+        cfgDir = '.idlerc' # 在安装多个不同版本python的时候可尝试修改此处，避免读取cfg出错
         userDir = os.path.expanduser('~')
         if userDir != '~': # expanduser() found user home dir
             if not os.path.exists(userDir):
