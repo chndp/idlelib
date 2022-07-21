@@ -135,11 +135,11 @@ class SearchDialogBase:
         '''
         frame = self.make_frame("Options")[0]
         engine = self.engine
-        options = [(engine.revar, "Regular expression(正则)"),
-                   (engine.casevar, "Match case(区分大小写)"),
-                   (engine.wordvar, "Whole word(整词)")]
+        options = [(engine.revar, "Regular expression(正则)"), # 查找选项中文对照
+                   (engine.casevar, "Match case(区分大小写)"), # 查找选项中文对照
+                   (engine.wordvar, "Whole word(整词)")] # 查找选项中文对照
         if self.needwrapbutton:
-            options.append((engine.wrapvar, "Wrap around(循环)"))
+            options.append((engine.wrapvar, "Wrap around(循环)")) # 查找选项中文对照
         for var, label in options:
             btn = Checkbutton(frame, variable=var, text=label)
             btn.pack(side="left", fill="both")
